@@ -1,0 +1,93 @@
+
+
+.wrapper
+{
+    width:45%;
+    height:auto;
+    margin:10px auto;
+    border:1px solid rgb(243, 242, 242);
+    background:rgb(150, 102, 74);
+    
+    
+    
+}
+.comment_form
+{
+    width:80%;
+    margin:100px auto;
+    border:1px solid skyblue;
+    background:	#a3a393;
+    padding:20px;
+
+}
+.comment_form label{
+    display:block;
+    margin:5px 0px 5px 0px;
+}
+.comment_form input,textarea{
+    padding:5px;
+    width:95%;
+
+}
+#submit_btn,#update_btn
+{
+    
+    margin:100px auto;
+    border:none;
+    color:white; 
+    background:#339;
+    padding:8px 15px; 
+    border-radius:4px;
+    margin-top:10px;
+}
+#update_btn
+{
+    background:#1c7600;
+}
+#display_area
+{
+    width:90%;
+    padding-top:15px;
+    margin:10px auto;
+}
+.comment_box
+{
+cursor:default;
+margin:5px;
+    border:1px solid grey;
+    padding:5px 10px;
+position:relative;
+
+}
+.delete
+{
+    cursor:pointer;
+    position:absolute;
+    top:0px;
+    right:3px;
+    display:none;
+    color:blueviolet;
+}
+.edit
+{
+    
+    cursor:pointer;
+    position:absolute;
+    top:0px;
+    right:45px;
+    display:none;
+    color:blueviolet;
+}
+.comment_box:hover .edit, .comment_box:hover .delete{
+display:block;
+}
+.comment_text
+{
+text-align:justify;
+}
+.display-name
+{
+    color:blue;
+    padding:0px;
+    margin:0px 0px 5px 0px;
+}

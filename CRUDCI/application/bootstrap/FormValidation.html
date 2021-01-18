@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+    function ValidationForm(){
+        var name = document.forms["myForm"]["name"].value;
+        if (name == "") {
+        window.alert("Name must be filled out");
+        return false;
+        }
+        var cnic = document.forms["myForm"]["cnic"].value;
+        if (cnic == "") {
+            window.alert("CNIC must be filled out");
+        return false;
+        }
+        var email = document.forms["myForm"]["email"].value;
+        if (email == "") {
+            window.alert("Email must be filled out");
+        return false;
+        }
+        var phone = document.forms["myForm"]["phone"].value;
+        if (phone == "") {
+            window.alert("Phone no. must be filled out");
+        return false;
+        }
+        var password = document.forms["myForm"]["password"].value;
+        if (password == "") {
+            window.alert("Password must be filled out");
+        return false;
+        }
+        var fscmarks = document.forms["myForm"]["fscmarks"].value;
+        if (fscmarks == "") {
+            window.alert("FSc Marks must be filled out");
+        return false;
+        }
+        var testmarks = document.forms["myForm"]["testmarks"].value;
+        if (testmarks == "") {
+            window.alert("Test Marks must be filled out");
+        return false;
+        }
+        return true;
+
+    }
+    function FScmarks(fscmarks)
+    {
+        var marks1;
+        marks1=(fscmarks/1100)*70;
+        document.write(marks1);
+        return marks1;
+    }
+    function Testmarks(testmarks)
+    {
+        var marks2;
+        marks2=(testmarks/400)*30;
+        document.write(marks2);
+        return marks2;
+    }
+    function Aggregate()
+    {
+        var marks;
+        grade = ''; 
+        var num1= document.getElementById("input1").value;
+        var num2=document.getElementById("input2").value;
+        var ab=(num1/1100)*70;
+        var cd=(num2/400)*30;
+        result= ab + cd;
+       // window.alert(result); 
+if(reulst =< 90 && result >=85){
+grade ='A'; 
+}
+
+        var aggregate=prompt("Please enter your aggregate")
+switch(grade)
+{
+    case 'A':
+    window.alert("You are selected as Mechanical Engineering");
+    break;
+    case '79':
+    window.alert("You are selected as Electrical Engineering");
+    break;
+    case '75':
+    window.alert("You are selected as Civil Engineering");
+    break;
+    case '72':
+    window.alert("You are selected as CS/CE Engineering");
+    break;
+    case '70':
+    window.alert("You are selected as Transportation Engineering");
+    break;
+}    
+    }
+
+
+
+
+    </script>
+    <style>
+    h1{background:#ffffff; font-size:30px; text-align:center ;}
+    .header {padding: 30px;text-align:center; font-size: 20px;}
+    .body{font-size:25px; font-style:Times;}</style>
+</head>
+<body style="background-image:url('thunder-purple-blur-1920-1080-desktop-microsoft-surface-wallpaper.jpg')">
+        <h1 align="center">Admission Form</h1>
+      <form name="myForm" onsubmit="return ValidationForm()" method="GET"> 
+    
+<div class="header">
+<h4>
+    Name:
+    <br>
+    <input type="text" name="name" size=50 required>
+</h4>
+<h4>
+    CNIC:
+    </br>
+    <input type="text" name="cnic" size=50 required>
+</h4>
+<h4>
+    Phone no:
+    <br>
+    <input type="tel" name="phone" size=50 required>
+</h4>
+<h4>
+        Gmail:
+        <br>
+        <input type="email" name="email" size=50 required>
+</h4>
+<h4>
+        Password:            
+        <br>
+        <input type="password" name="password" size=50 required>
+</h4>
+<input type="button" value="Submitt" onclick="alert('Data submitted successfully')" >
+ <input type="reset"> 
+<h4>
+        Enter FSc marks:      
+        <br>
+        <input id="input1" type="text" name="fscmarks" size=50 required>
+</h4>
+<h4>
+        Enter Entry test marks:
+        <br>
+        <input id="input2" type="text" name="testmarks" size=50 required>
+</h4>
+
+ <input type="button" value="Calculate"  onclick="Aggregate()" method="GET">
+</div>
+    </form> 
+</body>
+</html>
